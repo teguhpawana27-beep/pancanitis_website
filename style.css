@@ -1,0 +1,293 @@
+/* Reset CSS dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* --- BAGIAN UTAMA: BACKGROUND GAMBAR & OVERLAY --- */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: white; /* Warna Teks Putih untuk Kontras */
+
+    /* Menambahkan Gambar Background */
+    /* CATATAN: Path gambar disederhanakan. Ubah 'bengkel.jpg' jika nama file/folder Anda berbeda. */
+    background-image: url('gambar.jpg/gambar.jpg'); 
+    background-size: cover;          /* Gambar akan menutupi seluruh area viewport */
+    background-attachment: fixed;    /* Membuat gambar tetap saat discroll */
+    background-position: center center; 
+}
+
+.container {
+    width: 85%;
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 15px; 
+}
+
+/* --- HEADER DAN NAVIGASI --- */
+header {
+    background: rgba(0, 0, 0, 0.7); /* Background transparan gelap */
+    color: white;
+    padding-top: 15px;
+    min-height: 60px;
+    border-bottom: 2px solid #ff5722; /* Garis oranye untuk aksen */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+header h1 {
+    float: left;
+    margin: 0;
+    font-size: 24px;
+}
+
+header nav {
+    float: right;
+    margin-top: 5px;
+}
+
+header ul {
+    list-style: none;
+}
+
+header li {
+    display: inline;
+    padding: 0 15px;
+}
+
+header a {
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 15px;
+    transition: color 0.3s;
+}
+
+header a:hover {
+    color: #ff5722; /* Aksen oranye saat hover */
+}
+
+/* --- Bagian Hero (Beranda) --- */
+.hero {
+    background: rgba(0, 0, 0, 0.5); /* Lapisan transparan gelap untuk teks hero */
+    color: white;
+    min-height: 450px;
+    text-align: center;
+    padding-top: 120px;
+    margin-bottom: 30px;
+}
+
+.hero h2 {
+    font-size: 56px;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Bayangan teks agar lebih jelas */
+}
+
+.hero p {
+    font-size: 22px;
+    margin-bottom: 40px;
+}
+
+/* GAYA TOMBOL CTA (SEKARANG BERUPA LINK <a>) */
+#cta-button {
+    background: #ff5722; /* Aksen Oranye */
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 5px;
+    transition: background 0.3s;
+    font-weight: bold;
+    /* PROPERTI WAJIB UNTUK LINK <a> */
+    text-decoration: none;
+    display: inline-block;
+}
+
+#cta-button:hover {
+    background: #e64a19;
+}
+
+/* --- Bagian Produk (Menggunakan overlay terang agar kontras) --- */
+.products {
+    padding: 30px 0;
+    /* Menambahkan padding-top agar tidak tertutup sticky header */
+    padding-top: 100px;
+    background: rgba(255, 255, 255, 0.9); /* Latar belakang putih semi-transparan untuk blok konten */
+    color: #333; /* Mengubah warna teks produk menjadi gelap agar terbaca di latar belakang putih */
+    border-radius: 8px;
+    margin-bottom: 30px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.products h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #ff5722;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.product-item {
+    background: #fff;
+    padding: 15px;
+    border: 1px solid #ddd;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    border-radius: 5px;
+}
+
+.product-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.product-item img {
+    width: 100%;
+    height: auto;
+    max-height: 180px;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border-radius: 3px;
+}
+
+.product-item h3 {
+    margin: 10px 0;
+    color: #2c3e50;
+}
+
+.product-item p {
+    color: #666;
+    font-size: 0.9em;
+}
+
+.product-item .price {
+    display: block;
+    font-weight: bold;
+    color: #27ae60; /* Hijau untuk harga */
+    font-size: 1.3em;
+    margin-top: 8px;
+    margin-bottom: 5px; /* Tambahkan margin bawah untuk tombol */
+}
+
+/* GAYA TOMBOL BELI (SEKARANG BERUPA LINK <a>) */
+.buy-button {
+    background: #27ae60; /* Warna Hijau (untuk aksi positif) */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 4px;
+    margin-top: 10px;
+    transition: background 0.3s;
+    /* PROPERTI WAJIB UNTUK LINK <a> */
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    width: auto; /* Sesuaikan lebar */
+}
+
+.buy-button:hover {
+    background: #2ecc71;
+}
+
+/* KODE BARU: Gaya untuk Ikon WhatsApp di Tombol Beli */
+.buy-button .fab {
+    margin-right: 5px; /* Memberi jarak 5px di sebelah kanan ikon */
+    font-size: 1.1em;
+}
+
+/* --- Bagian Tentang Kami & Kontak --- */
+.about, .contact {
+    padding: 30px 0;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.7); /* Overlay transparan gelap agar teks putih jelas */
+    border-radius: 8px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.about h2, .contact h2 {
+    color: #ff5722;
+    margin-bottom: 15px;
+}
+
+.contact p {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+/* PROPERTI CSS BARU: Gaya untuk Link Kontak (Email/WhatsApp) */
+.contact-link {
+    color: #ff5722; /* Warna Oranye untuk menonjol */
+    text-decoration: none; /* Menghilangkan garis bawah default */
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.contact-link:hover {
+    color: #ffffff; /* Berubah menjadi putih saat kursor diarahkan */
+    text-decoration: underline; /* Menambahkan garis bawah saat hover */
+}
+
+
+/* --- Footer --- */
+footer {
+    padding: 15px;
+    margin-top: 20px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.8);
+    text-align: center;
+    font-size: 14px;
+}
+
+/* --- Media Queries (Untuk Responsif di HP) --- */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+
+    header h1 {
+        float: none;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    header nav {
+        float: none;
+        text-align: center;
+    }
+
+    header ul {
+        padding: 0;
+    }
+
+    header li {
+        padding: 5px 10px;
+        display: block; /* Membuat navigasi bar menjadi tumpukan di HP */
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .hero h2 {
+        font-size: 36px;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+    
+    .product-grid {
+        gap: 15px;
+    }
+}
